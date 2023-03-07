@@ -4,5 +4,7 @@ services:
     image: harivs94/angular
     ports:
       - "80:80"
+    volumes:
+      - .:/usr/share/nginx/html  
     container_name: angular-app
     restart: always
