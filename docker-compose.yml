@@ -3,8 +3,6 @@ services:
   web:
     image: harivs94/angular
     ports:
-      - "80:80"
-    volumes:
-      - ./dist/keysell/:/usr/share/nginx/html  
+      - "80:80" 
     container_name: angular-app
     restart: always
