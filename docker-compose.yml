@@ -1,0 +1,8 @@
+version: '3'
+services:
+  web:
+    image: harivs94/angular:latest
+    ports:
+      - "80:80"
+    container_name: angular-app
+    restart: always
