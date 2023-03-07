@@ -4,5 +4,5 @@ services:
     image: harivs94/angular
     ports:
       - "80:80"
-    container_name: angular
+    container_name: angular-app
     restart: always
