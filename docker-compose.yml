@@ -5,6 +5,6 @@ services:
     ports:
       - "80:80"
     volumes:
-      - /dist/keysell/:/usr/share/nginx/html  
+      - ./dist/keysell/:/usr/share/nginx/html  
     container_name: angular-app
     restart: always
