@@ -4,15 +4,10 @@ pipeline {
         nodejs '16.17.0'
     }
     stages {
-        stage('SCM') {
-            steps {
-                git branch: 'angular', url: 'https://github.com/Harivs94/angular.git'
-            }
-        }
        
         stage('Build docker image') {
             steps {
-                sh 'docker build -t harivs94/angular .'
+                sh 'time DOCKER_BUILDKIT=1 docker build -t harivs94/angular .'
             }
         }
         stage('Push docker image') {
