@@ -7,7 +7,7 @@ pipeline {
        
         stage('Build docker image') {
             steps {
-                sh 'time DOCKER_BUILDKIT=1 docker build -t harivs94/angular .'
+                sh 'DOCKER_BUILDKIT=1 docker build -t harivs94/angular .'
             }
         }
         stage('Push docker image') {
