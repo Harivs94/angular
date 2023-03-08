@@ -9,12 +9,7 @@ pipeline {
                 git branch: 'angular', url: 'https://github.com/Harivs94/angular.git'
             }
         }
-        stage('Install Deps') {
-            steps {
-                sh 'npm install'
-                sh 'ng build'
-            }
-        }
+       
         stage('Build docker image') {
             steps {
                 sh 'docker build -t harivs94/angular .'
@@ -28,7 +23,7 @@ pipeline {
                 }
             }
         }
-        stage('Run container'){
+        stage('Run container and Deploy'){
             steps {
                 sh 'docker-compose down -v'
                 sh 'docker-compose up -d'
